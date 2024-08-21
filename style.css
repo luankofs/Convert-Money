@@ -1,0 +1,140 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: linear-gradient(#8A51FC, #a376ff)
+}
+
+.logo {
+    width: 180px;
+    display: block;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #F4F4F4;
+    text-shadow: #0000001f 3px 3px 5px;
+    margin-bottom: 10px;
+}
+
+main {
+    width: 375px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    padding: 25px 23px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+div img {
+    width: 44px;
+}
+
+label {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #777777;
+}
+
+select {
+    width: 100%;
+    height: 48px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    opacity: 0px;
+    border: #BBBBBB 1px;
+    margin: 2px 0px 25px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555555;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    opacity: 0px;
+    border: #BBBBBB 1px;
+    margin: 2px 0px 10px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555555;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    opacity: 0px;
+    background-color: #772FD3;
+    border: #542394 1px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #6929bb;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: #772FD3 solid 1px;
+    padding: 12px;
+}
+
+.arrow-img {
+    margin: 25px 0px;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currency {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0px 0px 0px;
+}
+
+.currency-value {
+    color: #555555;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.for img {
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+
+
+
+@media (max-width: 768px) {
+    main {
+        width: 98%;
+    }
+  }
