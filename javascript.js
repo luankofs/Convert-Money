@@ -21,7 +21,7 @@ function removeActiveClass() {
 // switch image and currency name
 function changingCurrency() {
     const valueFromHTML = document.querySelector('.currencyFromName');
-    const valueFromNum = document.querySelector('.currencyFromValue');
+    const valueFromNum = document.querySelector('.currencyForValue');
     if(convertFor.value === 'dolar') {
         removeActiveClass();
         imgForDolar.classList.add('active');
