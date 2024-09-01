@@ -3,20 +3,16 @@ const apiEndpoint = 'https://economia.awesomeapi.com.br/json/last/';
 // Função para obter as taxas de câmbio
 async function getExchangeRates(fromCurrency, toCurrency) {
     try {
-        // Construindo a URL com os códigos de moeda no formato correto
         const response = await fetch(`${apiEndpoint}${fromCurrency}-${toCurrency}`);
-        
-        // Verifica se a resposta HTTP é OK (status 200)
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         
         const data = await response.json();
-        
-        // Log para verificar a estrutura de 'data'
+
         console.log('Response data:', data);
         
-        // A chave para acessar os dados segue o padrão FROM-TO
+        //chave para acessar os dados no padrão FROM-TO
         const key = `${fromCurrency}${toCurrency}`;
         if (!data[key]) {
             throw new Error('Rates data is undefined');
