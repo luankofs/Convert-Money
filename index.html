@@ -17,18 +17,29 @@
     <main>
         <label>
             Converter <strong>de</strong>
-            <select name="" id="converte-from">
-                <option value="">R$ Real Brasileiro</option>
+            <select name="" id="convert-from-select">
+                <option class="" value="real">R$ Real Brasileiro</option>
+                <option class="" value="dolar-estados-unidos">$ Dólar Americano</option>
+                <option class="" value="euro">€ Euro</option>
+                <option class="" value="libra">£ Libra</option>
+                <option class="" value="peso-argentino">ARS Peso Argentino</option>
+                <option class="" value="iene">¥ Iene</option>
+                <option class="" value="peso-uruguaio">UYU Peso Uruguaio</option>
+                <option class="" value="dolar-canadense">$ Dolar Canadense</option>
             </select>
         </label>
 
         <label>
             Converter <strong>para</strong>
             <select name="" id="currency-select">
-                <option class="convert-for" value="dolar">$ Dólar Americano</option>
+                <option class="convert-for" value="dolar-estados-unidos">$ Dólar Americano</option>
+                <option class="convert-for" value="real">R$ Real Brasileiro</option>
                 <option class="convert-for" value="euro">€ Euro</option>
                 <option class="convert-for" value="libra">£ Libra</option>
-                <option class="convert-for" value="bitcoin">BTC Bitcoin</option>
+                <option class="convert-for" value="peso-argentino">ARS Peso Argentino</option>
+                <option class="" value="iene">¥ Iene</option>
+                <option class="" value="peso-uruguaio">UYU Peso Uruguaio</option>
+                <option class="" value="dolar-canadense">$ Dolar Canadense</option>
             </select>
         </label>
 
@@ -41,8 +52,8 @@
 
         <section>
             <div class="currency-box">
-                <img src="assets/ea5a0aa77537e7939a6742b588d600a6.png" alt="logo-brazil">
-                <p class="currency">Real</p>
+                <img class="from-img" src="assets/ea5a0aa77537e7939a6742b588d600a6.png" alt="logo-brazil">
+                <p class="currency-from">Real</p>
                 <p class="currency-value-to-convert">R$ 0,00</p>
             </div>
 
@@ -56,5 +67,6 @@
         </section>
     </main>
 </body>
-<script src="./scripts.js"></script>
+<script src="./NewScript.js"></script> <!-- atualização c/ API -->
+<!-- <script src="./scripts.js"></script> Feita pela aula Rodolfo -->
 </html>
