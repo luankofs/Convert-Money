@@ -9,23 +9,31 @@ async function getExchangeRates(fromCurrency, toCurrency) {
         }
         
         const data = await response.json();
-
-        console.log('Response data:', data);
-        
-        //chave para acessar os dados no padrão FROM-TO
         const key = `${fromCurrency}${toCurrency}`;
+        
         if (!data[key]) {
             throw new Error('Rates data is undefined');
         }
         
-        const rate = parseFloat(data[key].bid);
-        console.log('Taxa de câmbio obtida com sucesso:', rate); // Verificar se a taxa é retornada corretamente
+        // Log do valor bruto antes de analisar
+        console.log('Raw bid value:', data[key].bid);
+        
+        let rate = parseFloat(data[key].bid);
+        
+        // Verificação adicional para pequenas taxas
+        if (fromCurrency === 'JPY' && rate > 0.1) {
+            rate = rate / 100;
+            console.warn('Ajustando a taxa de câmbio do Iene:', rate);
+        }
+        
+        console.log('Taxa de câmbio obtida com sucesso:', rate);
         return rate;
     } catch (error) {
         console.error('Erro ao obter taxas de câmbio:', error);
         return null;
     }
 }
+
 
 const convertButton = document.querySelector('#convert-button');
 const currencyFrom = document.querySelector('.currency-from');
