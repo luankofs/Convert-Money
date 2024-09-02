@@ -43,7 +43,7 @@ convertButton.addEventListener('click', convertValues);
 function changeCurrencyFrom() {
     const currencyMapping = {
         'real': { code: 'BRL', name: 'Real', img: './assets/ea5a0aa77537e7939a6742b588d600a6.png' },
-        'dolar': { code: 'USD', name: 'Dólar', img: './assets/9a7dabec33201d95eb1a05fdea133971.png' },
+        'dolar-estados-unidos': { code: 'USD', name: 'Dólar', img: './assets/9a7dabec33201d95eb1a05fdea133971.png' },
         'euro': { code: 'EUR', name: 'Euro', img: './assets/359fe6050c52b9c7479798be6e1584e2.png' },
         'libra': { code: 'GBP', name: 'Libra Esterlina', img: './assets/3223b56d3c95277c822d9484d1bc9757.png' },
         'peso-argentino': { code: 'ARS', name: 'Peso', img: './assets/3909430.png' },
@@ -66,7 +66,7 @@ function changeCurrency() {
         'real': { code: 'BRL', name: 'Real Brasileiro', img: './assets/ea5a0aa77537e7939a6742b588d600a6.png' },
         'iene': { code: 'JPY', name: 'Iene', img: './assets/197604.png' },
         'peso-uruguaio': { code: 'UYU', name: 'Peso Uruguaio', img: './assets/197599.png' },
-        'dolar-canadense': { code: 'CAD', name: 'Dolar Canadense', img: './assets/197430.png'}
+        'dolar-canadense': { code: 'CAD', name: 'Dolar Canadense', img: './assets/197430.png' }
     };
     const currency = currencyMapping[currencySelect.value];
     document.getElementById('currency-name').innerHTML = currency.name;
